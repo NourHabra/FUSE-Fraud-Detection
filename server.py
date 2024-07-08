@@ -7,14 +7,14 @@ app = Flask(__name__)
 
 # Load the saved model from JSON
 model = xgb.Booster()
-model.load_model('fraud_detection_model.json')  # Replace with your JSON model file name
+model.load_model('model/fraud_detection_model.xg.model')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
     
     # Print the contents of the request
-    print("Received request data:", data)
+    # print("Received request data:", data)
     
     # Reorder the input data and split the category into individual binary characters
     input_data = {
