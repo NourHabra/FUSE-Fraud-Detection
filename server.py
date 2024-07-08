@@ -9,6 +9,12 @@ app = Flask(__name__)
 model = xgb.Booster()
 model.load_model('model/fraud_detection_model.xg.model')
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Hello, World!"
+
+
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()

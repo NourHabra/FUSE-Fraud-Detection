@@ -11,3 +11,22 @@ Content-Type: application/json
   "amount": 287.13,
   "category": "00101"
 }
+
+###
+
+POST https://nourhabra.pythonanywhere.com/predict
+Content-Type: application/json
+
+{
+  "id": 211,
+  "year": 2015,
+  "month": 11,
+  "day": 15,
+  "hour": 12,
+  "minute": 55,
+  "amount": 287.13,
+  "category": "00101"
+}
+
+###
+GET https://nourhabra.pythonanywhere.com/
