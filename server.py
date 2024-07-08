@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load the saved model from JSON
 model = xgb.Booster()
-model.load_model('model/fraud_detection_model.xg.model')
+model.load_model('fraud_detection_model.xg.model')
 
 @app.route('/', methods=['GET'])
 def home():
